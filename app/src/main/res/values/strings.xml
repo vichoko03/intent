@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Ultimo_intento</string>
+    <string name="necesitas_ayuda">¿Necesitas ayuda?</string>
+    <string name="tienda_online">Tienda online</string>
+    <string name="start">iniciar</string>
+    <string name="email_input">ejemplo@ejemplo.com</string>
+    <string name="clave">*******</string>
+    <string name="register">registrate</string>
+    <string name="Password">clave</string>
+    <string name="email">correo</string>
+    <string name="name">nombre</string>
+    <string name="Last_name">apellido</string>
+    <string name="you_have_an_account">¿tienes una cuenta?</string>
+    <string name="contact">numero de contancto 12234566</string>
+    <string name="login">iniciar sesión</string>
+    <string name="Title">Tienda onile</string>
+    <string name="All">TODO</string>
+    <string name="Login">Ya tengo una cuenta</string>
+    <string name="Last_name_input">Apellido</string>
+    <string name="help_1">numero de contacto 6378542</string>
+    <string name="buy">relizar compra</string>
+    <string name="card">Cuadro</string>
+    <string name="Plus">+</string>
+    <string name="lot">1</string>
+    <string name="Minus">-</string>
+    <string name="Price">$500</string>
+    <string name="Product">producto_1</string>
+</resources>

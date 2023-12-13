@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Carrito"
+    android:background="#4D4F53"
+    >
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#A145DA"
+        android:text="@string/Title"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="82dp"
+        app:layout_editor_absoluteY="46dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#A145DA"
+        android:contentDescription="@string/All"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="42sp"
+        android:layout_marginTop="80dp"
+        android:background="#B3DEAC"
+        android:text="@string/you_have_an_account"
+        android:textColor="#1D780F"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="82dp"
+        app:layout_editor_absoluteY="46sp" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/help"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Contenedor izquierdo para texto -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Elementos del carrito de compra -->
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Product"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/Price"
+                    android:textSize="16sp" />
+
+                <!-- Botones para incrementar/decrementar unidades -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <!-- Botón para restar unidades -->
+                    <Button
+                        android:id="@+id/menosbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FB3737"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/Minus"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <!-- Texto para mostrar la cantidad -->
+                    <TextView
+                        android:id="@+id/quantityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/lot"
+                        android:textSize="18sp" />
+
+                    <!-- Botón para sumar unidades -->
+                    <Button
+                        android:id="@+id/masbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#19B1ED"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/Plus"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+
+                <!-- Botón para eliminar producto del carrito -->
+            </LinearLayout>
+
+            <!-- Contenedor derecho para la imagen -->
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="107dp"
+                android:layout_height="109dp"
+                android:contentDescription="@string/card"
+                android:scaleType="centerCrop"
+                android:src="@color/black" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btncomprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#26AF1C"
+        android:paddingHorizontal="16dp"
+        android:text="@string/buy"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:text="@string/contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
